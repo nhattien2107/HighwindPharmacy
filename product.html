@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Product</title>
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="css/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
@@ -16,11 +16,16 @@
     <!-- Glide CSS -->
     <link rel="stylesheet" href="css/glide-master/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide-master/dist/css/glide.theme.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-    <!-- ---------------- -->
+        <!-- ---------------- -->
     <!--   GO TOP BUTTON  -->
     <!-- ---------------- -->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
@@ -48,11 +53,10 @@
             </div>
         </div>            
     </div>
-    
     <!-- ---------------- -->
     <!--      HEADER      -->
     <!-- ---------------- -->
-    <header class="header" >       
+    <header class="header" id="myHeader">        
         <!-- ---------------- -->
         <!-- LOGO AND SEARCH  -->
         <!-- ---------------- -->
@@ -79,7 +83,7 @@
         <!-- ---------------- -->
         <div class="navbar_type_med">
             <ul>
-                <li><a class="nav_items" href="type.html">Products by Brand</a></li>
+                <li><a class="nav_items" href="#">Products by Brand</a></li>
                 <li><a class="nav_items" href="#">Vitamin</a></li>
                 <li><a class="nav_items" href="#">Fever & Pain Relief</a></li>
                 <li><a class="nav_items" href="#">Allergies & Sinus</a></li>
@@ -93,34 +97,91 @@
     <!--    MAIN CONTENT  -->
     <!-- ---------------- -->
     <div class="main_content">
-        <div class="glide hero">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide"><img src="img/slideimg1.png" width="100%" alt=""></li>
-                <li class="glide__slide"><img src="img/slideimg2.png" width="100%" alt=""></li>
-                <li class="glide__slide"><img src="img/slideimg3.png" width="100%" alt=""></li>
-              </ul>
+
+        <nav class="router_nav">
+            <div class="home_logo">
+                <a href="index.html"><i class="fa fa-home"></i> Home</a>
             </div>
+            <div class="type_display">
+                <a href="#">Product Type</a>
+            </div>
+            <div class="name_display">
+                <span>Product Name</span>
+            </div>
+        </nav>
+
+        <div class="product_content">            
+            <div class="product_img">
+                <img src="img/sample1.png" width="100%" alt="">
+            </div>
+            <div class="right_content">
+                <div class="product_details">
+                    <div class="product_info">               
+                        <h2><strong>SKIN CONDITIONS</strong></h2>
+                        <div class="product_name">
+                            <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
+                        </div>
+                        <div class="date_manu">
+                            <span>Date: 18/06/2021 | Product by: <a href="#"><b> IT COSMETICS</b></a></span>
+                            <h4><strong>Availability:</strong> in stock.</h4>
+                        </div>
+                        <div class="product_price">
+                            <h1>$99.00</h1>
+                        </div>
+                    </div>
+                    <div class="addtocart">                       
+                        <div class="qty_input">
+                            <label for="quantity"><strong>QTY:</strong></label>
+                            <input type="text" name="quantity" style="text-align:center" value="1" maxlength="2" size="2" />
+                        </div>
+                        <a id="cart_href" href="#"><div class="cart_btn">ADD TO CART</div></a>
+                    </div>
+                </div>
+                <div class="product_description">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home"><strong>Description</strong></a></li>
+                        <li><a data-toggle="tab" href="#menu1"><strong>Ingredients</strong></a></li>
+                        <li><a data-toggle="tab" href="#menu2"><strong>Warnings and Disclaimers</strong></a></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <h4><strong>What it is:</strong> </h4> 
+
+                            A concentrated treatment that strengthens the hair from within, reducing breakage and improving its look and feel. <br/>
+
+                            <h4><strong>What it does:</strong> </h4> 
+
+                            This concentrated treatment helps to strengthen and protect your hair, repairing damaged strands and restoring your locks to their healthy shine. It contains a first-of-its-kind, patented, bond-building technology, which relinks the broken disulfide bonds caused by chemical, thermal and mechanical damage to the hair. This formula is made to work with every hair type, providing a real, structural repair that works from within. <br/>
+
+                            <h4><strong>What else you need to know:</strong> </h4> 
+                            <ol>
+                                <li>Suitable for all hair types.</li>
+                                <li>Addresses damaged and compromised hair.</li>
+                                <li>Strengthens and protects hair structure.</li>
+                                <li>Restores healthy appearance and texture.</li>
+                                <li>Paraben-free.</li>
+                                <li>Sulfate-free.</li>
+                                <li>Phthalate-free.</li>
+                                <li>Check out the list of 'formulated without' ingredients here.</li>
+                            </ol>                     
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <h4><strong>Ingredients:</strong> </h4> 
+                            <span>Water (Aqua), Bis-Aminopropyl Diglycol Dimaleate, Propylene Glycol, Cetearyl Alcohol, Behentrimonium Methosulfate, Cetyl Alcohol, Phenoxyethanol, Glycerin, Hydroxyethyl Ethylcellulose, Stearamidopropyl Dimethylamine, Quaternium-91, Sodium Benzoate, Cetrimonium Methosulfate, Cetrimonium Chloride, Fragrance (Parfum), Polyquaternium-37, Tetrasodium EDTA, Butylphenyl Methylpropional, Etidronic Acid, Ascorbic Acid, Phytantriol, Tocopheryl Acetate, Aloe Barbadensis Leaf Juice, Panthenol, Simmondsia Chinensis (Jojoba) Seed Oil, Citric Acid, Potassium Sorbate.</span> 
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h4><strong>Warnings:</strong> </h4> 
+                            <span>For external use only. Avoid direct contact with eyes. In case of eye contact, rinse immediately with water. We recommend patch testing before first use. In the unlikely event of any negative reaction discontinue use.</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>                   
         </div>
 
-        <div class="four_buttons">
-            <div class="ab_contains">
-                <a class="ab_btn" href="#">Face masks & sanitisers</a>
-            </div>
-            <div class="ab_contains">
-                <a class="ab_btn" href="#">COVID-19 tips & advice</a>
-            </div>
-            <div class="ab_contains">
-                <a class="ab_btn" href="#">Health & wellbeing</a>
-            </div>
-            <div class="ab_contains">
-                <a class="ab_btn" href="#">COVID-19 vaccinations</a>
-            </div>
-        </div>
-        <!-- Recommend Products-->
         <div class="recommend_for_you">
             <div class="rec_title">
-                <h1>Recommended for You</h1>
+                <h1>You May Also Like</h1>
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="item">
@@ -265,190 +326,7 @@
                 </div>
             </div>           
         </div>
-        <!-- All Products-->
-        <div class="recommend_for_you">
-            <div class="rec_title">
-                <h1>All Products</h1>
-            </div>
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>  
-                        </a>                                 
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>                                      
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="rec_card">
-                        <a class="card_content" href="#">
-                            <div class="rec_card_img">
-                                <img src="img/sample1.png" alt="sample">                        
-                            </div>                                   
-                            <div class="rec_product">
-                                <div class="rec_brand">
-                                    <span>IT COSMETICS</span>
-                                </div>
-                                <div class="rec_name">
-                                    <span>Your Skin But Better CC+ Cream Oil-Free Matte with SPF 40</span>
-                                </div>                       
-                            </div>               
-                        </a>
-                        <div class="price_cart">
-                            <span>$99.99 | <a class="cart" href=""><i class="fa fa-cart-plus" style="padding-right: 5px;"></i>Add To Cart</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>           
-        </div>
-        <!-- Why Choose Us-->
-        <div class="why_choose_us">
-            <div class="why_title">
-                <h2>Why Shop with HighWind Pharmacy</h2>
-            </div>
-            <div class="why_content">
-                <div class="why_text">
-                    <div class="why_img">
-                        <img src="img/WhyChooseUs_Cross.png" alt="">
-                    </div>
-                    <div class="why_desc">
-                        Our product ranges allow you to manage <br> the healthcare of your whole household.
-                    </div>
-                </div>
-                <div class="why_text">
-                    <div class="why_img">
-                        <img src="img/WhyChooseUs_Handshake.png" alt="">
-                    </div>
-                    <div class="why_desc">
-                        We're registered with the GPhC (9010315) <br>
-                        and you can see our Trust Pilot ranking <br>
-                        above.
-                    </div>
-                </div>
-                <div class="why_text">
-                    <div class="why_img">
-                        <img src="img/WhyChooseUs_MadeInUK.png" alt="">
-                    </div>
-                    <div class="why_desc">
-                        All products are sourced and shipped from <br>
-                        the LJK, so they're always traceable and <br>
-                        delivered quickly. <br>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <!-- ---------------- -->
@@ -550,7 +428,7 @@
 
         //Sticky header 
         window.onscroll = function () {
-          myFunction();
+        myFunction();
         };
 
         var header = document.getElementById("myHeader");

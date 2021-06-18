@@ -1,0 +1,77 @@
+.top_content:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_items:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.router_nav {
+    display: flex;
+    padding: 10px 0 10px 20px;
+}
+
+.home_logo:after {
+    content: ">";
+    padding: 0 10px;
+}
+
+.home_logo a, .type_display span {
+    color: black;
+    font-size: 13px;
+}
+
+.type-brand-container {
+    display: flex;
+}
+
+.left-content {
+    width: 30%;
+}
+
+.right-content {
+    width: 70%;  
+    display: flex;
+    flex-direction: column;  
+}
+
+.product_show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-content ul {
+    flex-direction: column;
+    margin: 0 0 30px 0;
+}
+
+.left-content li {
+    padding: 10px 0;
+}
+
+.nav_item {
+    color: black;
+}
+
+.rec_card {
+    width: 33% !important;
+}
+
+.pagination_bar {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pag_button {
+    width: 30px;
+    height:30px;
+    border: 1px solid grey;
+    margin: 0 5px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
