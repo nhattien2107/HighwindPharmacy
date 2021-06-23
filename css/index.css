@@ -108,7 +108,7 @@ body {
 }
 
 .other_content {
-    min-width: 500px;
+    min-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
